@@ -1,0 +1,132 @@
+GIVEN I am using a daily planner to create a schedule
+WHEN I open the planner
+THEN the current day is displayed at the top of the calendar
+
+// break this down to what you will to create the scheduler
+
+WHEN I scroll down
+THEN I am presented with time blocks for standard business hours
+
+//time block coding for the standard busimess hours
+
+WHEN I view the time blocks for that day
+THEN each time block is color-coded to indicate whether it is in the past, present, or future
+
+// create a color coding system for past, present & future.
+// vistit Activity 16/ week 5
+
+
+WHEN I click into a time block
+THEN I can enter an event
+
+// click event for each time block
+
+WHEN I click the save button for that time block
+THEN the text for that event is saved in local storage
+
+// local storage - go to week for activities
+
+WHEN I refresh the page
+THEN the saved events persist
+
+// ctreate a save button that saves it onto local storage.
+// you can refer back to week 4 activities with BOB
+
+ <div class="container">
+      <h2 class="date"></h2>
+      <div class="calendar"></div>
+    </div>
+    <div class="modal-container">
+      <div class="modal">
+        <span class="modal-container--close">&times;</span>>
+        <form class="modal-container--form">
+          <label for="start-selct">Start Time</label>
+          <select id="start-select">
+            <label for="end-select">End Time</label>
+            <select id="end-select">
+            </select>
+            <button type="submit">Submit</button>
+          </form>
+          </select>
+        </span>
+      </div>
+    </div>
+
+let d = new Date();
+let year = d.getFullYear();
+let month = d.getMonth();
+let day = d.getDate();
+
+let totalDays = new Date(year, month, 0).getDate();
+
+let output =
+  (month < 10 ? "0" : "") +
+  month +
+  "/" +
+  (day < 10 ? "0" : "") +
+  day +
+  "/" +
+  year;
+
+$(".date").text(`${output}`);
+npm install moment --save   
+yarn add moment             
+Install-Package Moment.js   
+spm install moment --save  
+meteor add momentjs:moment  
+bower install moment --save
+
+   <div id="days" class="Row">
+        <option text="Monday">Monday</option>
+        <option text="tuesday">Tuesday</option>
+        <option text="wednesday">Wednesday</option>
+        <option text="thursday">Thursday</option>
+        <option text="fridy">Friday</option>
+        <option text="saturday">Saturday</option>
+        <option text="sunday">Sunday</option>
+      </div>
+        var planCol = $("<div>");
+        <option value="7 Am">7 AM</option>
+        <option value="8 Am">8 AM</option>
+        <option value="9 Am">9 AM</option>
+        <option value="10 Am">10 AM</option>
+        <option value="11 Am">11 AM</option>
+        <option value="12 PM">12 PM</option>
+        <option value="1 Am">1 PM</option>
+        <option value="2 Am">2 PM</option>
+        <option value="3 Am">3 PM</option>
+        <option value="4 Am">4 PM</option>
+        <option value="5 Am">5 PM</option>
+        <option value="6 PM">6 PM</option>
+        <option value="6 PM">7 PM</option>
+        
+
+        //   then(function (response) {
+//     $(".container").text(JSON.stringify(response));
+//   }).then(function (response) {
+//     $("div")(response);
+//   });
+// }
+
+// $("#time");
+
+// for (i = 0; i < timeObj; i++) {
+//   $(".row").text(timeObj[i]);
+//   $(".column");
+//   console.log(timeObj);
+// }
+//$("#container").append()
+// $.ajax({
+//     url:queary url
+//     method:'get'
+//   }).then(function(response){
+//     const data =response.data|| []
+//     data.forEach(function(item){
+//       const url =item.images.origional.url
+//       const title =item.title
+//       const rating =item.rating
+//       consttemplate
+//     })
+//   })
+//   
+
