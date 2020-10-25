@@ -24,8 +24,8 @@ let timeObj = [
   "6 PM",
   "7 PM",
 ];
-renderAgenda();
-init();
+// renderAgenda();
+// init();
 let timeVal = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
 for (let i = 0; i < timeObj.length; i++) {
   let hoursRow = $("<div>");
@@ -64,50 +64,20 @@ for (let i = 0; i < timeObj.length; i++) {
   saveBtn.text("save");
   saveBtnCol.append(saveBtn);
 }
-function renderAgenda() {
-  for (let i = 0; agendaEl.length; i++) {
-    var agenda = agendaEl[i];
-    // var li = document.createElement("li");
-    agendaInput.textContent = agenda;
-    $("#agenda-text").attr("data-index", i);
-    // var button = document.createElement("button");
-    // button.textContent = "save";
-    // li.appendChild(button);
-  }
-}
-// function init() {
-//   var storedAgenda = JSON.parse(localStorage.getItem("agendaEL"));
-
-//   if (storedAgenda !== null) {
-//     agendaEl = storedAgenda;
-
-//     renderAgenda();
-//   }
-// }
-
-function storeAgenda() {
-  localStorage.setItem("agendaEl", JSON.stringify(agendaEl));
-}
 
 $("button").on("click", function (event) {
   event.preventDefault();
-  var agendaText = agendaInput;
-  if (agendaText === "") {
-    return;
-  }
-  // localStorage.setItem("agendaEl", JSON.stringify(agendaEl));
-  // var agendaInput = JSON.parse(localStorage.getItem("agendaEl"));
-  agendaEl.push(agendaText);
-  agendaInput.value = "";
 
-  storeAgenda();
-  renderAgenda();
+  localStorage.setItem("agendaEl", JSON.stringify(agendaEl));
+  var agendaInput = JSON.parse(localStorage.getItem("agendaEl"));
+  agendaEl.push(agendaInput);
+  agendaInput.value = agendaEl;
 });
+function agendaInput(type, text) {
+  agendaInput.textContent = text;
+  agendaInput.attr("class", type);
+}
 
-// function userInput(type, text) {
-//   userInput.textContent = text;
-//   userInput.attr("class", type);
-// }
 // function renderUserInput() {
 //   var userInput = localStorage.getItem("timeVal");
 //   userInput.textContent = "";
@@ -125,3 +95,23 @@ $("button").on("click", function (event) {
 //   localStorage.setItem("userInput", input);
 //   renderUserInput();
 // });
+// function renderAgenda() {
+//   for (let i = 0; agendaEl.length; i++) {
+//     var agenda = agendaEl[i];
+//     // var li = document.createElement("li");
+//     agendaInput.textContent = agenda;
+//     $("#agenda-text").attr("data-index", i);
+//     // var button = document.createElement("button");
+//     // button.textContent = "save";
+//     // li.appendChild(button);
+//   }
+// }
+// function init() {
+//
+
+//   if (storedAgenda !== null) {
+//     agendaEl = storedAgenda;
+
+//     renderAgenda();
+//   }
+// }
