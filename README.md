@@ -1,6 +1,6 @@
 # Work-Day-Scheduler
 
-###_A single page website for a user to organize thier daily tasks_
+### _A single page website for a user to organize thier daily tasks_
 
 Link to page:
 file:///Users/james/Desktop/UNH%20Coding%20Bootcamp/UNH-Home-Work/HW-5/Work-Day-Scheduler/index.html &
