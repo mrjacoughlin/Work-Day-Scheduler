@@ -65,18 +65,18 @@ for (let i = 0; i < timeObj.length; i++) {
   saveBtnCol.append(saveBtn);
 }
 
-$("button").on("click", function (event) {
-  event.preventDefault();
+// $("button").on("click", function (event) {
+//   event.preventDefault();
 
-  localStorage.setItem("agendaEl", JSON.stringify(agendaEl));
-  var agendaInput = JSON.parse(localStorage.getItem("agendaEl"));
-  agendaEl.push(agendaInput);
-  agendaInput.value = agendaEl;
-});
-function agendaInput(type, text) {
-  agendaInput.textContent = text;
-  agendaInput.attr("class", type);
-}
+//   localStorage.setItem("agendaEl", JSON.stringify(agendaEl));
+//   var agendaInput = JSON.parse(localStorage.getItem("agendaEl"));
+//   agendaEl.push(agendaInput);
+//   agendaInput.value = agendaEl;
+// });
+// function agendaInput(type, text) {
+//   agendaInput.textContent = text;
+//   agendaInput.attr("class", type);
+// }
 
 // function renderUserInput() {
 //   var userInput = localStorage.getItem("timeVal");
